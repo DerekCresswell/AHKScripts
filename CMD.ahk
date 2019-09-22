@@ -9,4 +9,8 @@
 	
 	^v:: SendInput {Raw}%ClipBoard%
 
+	^Del:: SendInput {Del 99}
+
+	^Bs:: SendInput ^{Left}{Del 99}
+
 #IfWinActive
