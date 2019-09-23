@@ -1,6 +1,16 @@
 ﻿
 ; Hotkeys related to the Command Prompt
 
+; Directory
+	
+	; Any Window
+		; #x - Sentinal, Exits script.
+
+	; CMD
+		; ^v - Pastes Clipboard at cursor
+		; ^Del - Deletes all characters left of the cursor
+		; ^Bs - Deletes entire line
+
 #NoTrayIcon
 #x:: 
 	ExitApp 
@@ -14,3 +24,4 @@
 	^Bs:: SendInput ^{Left}{Del 99}
 
 #IfWinActive
+
