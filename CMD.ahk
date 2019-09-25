@@ -37,8 +37,7 @@ Exit
 
 	^c:: 
 		KeyWait, d, D
-		filePath = % GetPathFromExplorer()
-		Run, cmd.exe, %filePath%
+		Run, cmd.exe, % GetPathFromExplorer()
     	Return
 
 #IfWinActive
@@ -70,4 +69,5 @@ GetPathFromExplorer() {
 	StringReplace, full_path, full_path, `r, , all
 	
 	Return %full_path%
+	
 }
