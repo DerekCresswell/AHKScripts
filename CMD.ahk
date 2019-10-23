@@ -1,4 +1,4 @@
-﻿
+
 ; Hotkeys related to the Command Prompt
 
 ; Directory ------------------------------
@@ -10,6 +10,7 @@
 		; ^v - Pastes Clipboard at cursor
 		; ^Del - Deletes all characters left of the cursor
 		; ^Bs - Deletes entire line
+		; ^g - Checks if your git repo is up to date with "origin/master"
 
 	; File Explorer
 		; ^cd - Opens CMD to the current directory
@@ -30,6 +31,12 @@ Exit
 	^Del:: SendInput {Del 99}
 
 	^Bs:: SendInput ^{Left}{Del 99}
+
+	^g::
+		; KeyWait, f, D
+		SendInput git fetch {Enter}
+		SendInput git status origin/master {Enter}
+		Return
 
 #IfWinActive
 
