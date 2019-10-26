@@ -14,6 +14,7 @@
 
 	; File Explorer
 		; ^cd - Opens CMD to the current directory
+		;		& checks if git repo is up to date with "origin/master"
 
 ; Hotkeys ------------------------------
 
