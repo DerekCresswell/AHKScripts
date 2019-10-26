@@ -47,8 +47,9 @@ Exit
 		Path = % GetPathFromExplorer()
 		Run, cmd.exe, % Path
 		
+		; Future add a function to check for git files in higher dirs
 		if(FileExist(Path . "/.git")) {
-			MsgBox Fetching Latest Commits
+			WinWaitActive, ahk_class ConsoleWindowClass
 			SendInput git fetch {Enter}
 			SendInput git status origin/master {Enter}
 		}
