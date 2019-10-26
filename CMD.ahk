@@ -44,7 +44,15 @@ Exit
 
 	^c:: 
 		KeyWait, d, D
-		Run, cmd.exe, % GetPathFromExplorer()
+		Path = % GetPathFromExplorer()
+		Run, cmd.exe, % Path
+		
+		if(FileExist(Path . "/.git")) {
+			MsgBox Fetching Latest Commits
+			SendInput git fetch {Enter}
+			SendInput git status origin/master {Enter}
+		}
+
     	Return
 
 #IfWinActive
