@@ -33,10 +33,17 @@ Exit
 
 	^Bs:: SendInput ^{Left}{Del 99}
 
-	^g::
-		; KeyWait, f, D
+	~g & f::
+		KeyWait, Ctrl, D
+		Gosub, ^Bs
 		SendInput git fetch {Enter}
 		SendInput git status origin/master {Enter}
+		Return
+
+	~g & s::
+		KeyWait, Ctrl, D
+		Gosub, ^Bs
+		SendInput git status {Enter}
 		Return
 
 #IfWinActive
