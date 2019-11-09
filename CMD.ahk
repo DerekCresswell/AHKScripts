@@ -10,7 +10,8 @@
 		; ^v - Pastes Clipboard at cursor
 		; ^Del - Deletes all characters left of the cursor
 		; ^Bs - Deletes entire line
-		; ^g - Checks if your git repo is up to date with "origin/master"
+		; ^gf - Checks if your git repo is up to date with "origin/master"
+		; ^gs - Runs "git status"
 
 	; File Explorer
 		; ^cd - Opens CMD to the current directory
